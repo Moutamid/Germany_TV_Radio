@@ -7,18 +7,40 @@
     android:background="@color/appClr"
     tools:context=".MainActivity">
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/imgg"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:src="@drawable/name_germany" />
+        android:src="@drawable/name_germany" />-->
+
+    <TextView
+        android:id="@+id/title_lang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Language"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/title_main"
+        android:layout_below="@+id/title_lang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/germany_tv_radio"
+        android:textColor="@color/baseClr"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="25sp"/>
 
     <HorizontalScrollView
         android:id="@+id/top_scroll"
         android:layout_width="match_parent"
-        android:layout_below="@+id/imgg"
+        android:layout_below="@+id/title_main"
         android:background="@drawable/shape_appclr2"
         android:layout_margin="20dp"
         android:padding="10dp"
@@ -51,13 +73,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_fav"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Favorites"/>
+                            android:text="@string/favorites"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -84,13 +107,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_setting"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Settings"/>
+                            android:text="@string/settings"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -117,13 +141,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_help"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Help"/>
+                            android:text="@string/help"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -150,13 +175,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_term"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Policy/Terms"/>
+                            android:text="@string/policy_terms"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -183,13 +209,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_more"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="More Apps"/>
+                            android:text="@string/more_apps"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -216,13 +243,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_rate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Rate Us!"/>
+                            android:text="@string/rate_us"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -249,13 +277,14 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/text_report"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="15sp"
                             android:layout_margin="5dp"
-                            android:text="Report"/>
+                            android:text="@string/report"/>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -296,13 +325,14 @@
                         android:background="@color/white"/>
 
                     <TextView
+                        android:id="@+id/text_channel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textSize="15sp"
                         android:layout_margin="5dp"
-                        android:text="Live TV Channels"/>
+                        android:text="@string/live_tv_channels"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -347,6 +377,7 @@
                         android:background="@color/white"/>
 
                     <TextView
+                        android:id="@+id/text_radio"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -355,7 +386,7 @@
                         android:drawableRight="@drawable/ic_baseline_circle_24"
                         android:layout_margin="5dp"
                         android:drawableLeft="@drawable/ic_baseline_circle_24"
-                        android:text="Live Radio"/>
+                        android:text="@string/live_radio"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

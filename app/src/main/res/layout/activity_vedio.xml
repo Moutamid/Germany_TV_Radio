@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/appClr"
     tools:context=".VedioActivity">
+
     <TextView
         android:id="@+id/link"
         android:layout_width="match_parent"
