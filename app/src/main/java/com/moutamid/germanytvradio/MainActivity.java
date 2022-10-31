@@ -3,6 +3,7 @@ package com.moutamid.germanytvradio;
 import static com.moutamid.germanytvradio.Settings_Activity.SHARED_PREFS;
 import static com.moutamid.germanytvradio.Settings_Activity.TEXT1_1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -16,6 +17,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -183,6 +191,48 @@ public class MainActivity extends AppCompatActivity {
         report = findViewById(R.id.card_report_geramny);
         channel = findViewById(R.id.card_channel_germany);
         radio = findViewById(R.id.card_radio_germany);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdClicked() {
+                super.onAdClicked();
+            }
+
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+            }
+
+            @Override
+            public void onAdImpression() {
+                super.onAdImpression();
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+            }
+
+            @Override
+            public void onAdOpened() {
+                super.onAdOpened();
+            }
+        });
 
         fav.setOnClickListener(new View.OnClickListener() {
             @Override
